@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Changa+One:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Tillana:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f5f8;
+}
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  line-height: 80px;
+  z-index: 111;
+}
+.logo {
+  display: flex;
+  font-size: 40px;
+  font-weight: 800;
+  color: #3d535f;
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.nav-items {
+  display: flex;
+}
+.nav-items li {
+  list-style: none;
+  margin: 0 15px;
+}
+.nav-items li a {
+  font-size: 25px;
+  color: #3d535f;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.nav-items li:hover a,
+.links a:hover {
+  color: #7f00ff;
+}
+
+.links a {
+  font-size: 30px;
+  color: #3d535f;
+  margin: 25px 10px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  overflow: hidden;
+}
+.wrapper::before {
+  position: absolute;
+  content: "";
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  top: 40%;
+  left: -12%;
+  background: linear-gradient(45deg, #7f00ff, pink);
+  animation: object1 6s linear infinite;
+}
+@keyframes object1 {
+  50% {
+    left: -13%;
+    top: 41%;
+  }
+}
+.wrapper::after {
+  position: absolute;
+  content: "";
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  top: 25%;
+  left: 46%;
+  background: linear-gradient(45deg, #7f00ff, pink);
+  animation: object2 6s linear infinite;
+}
+@keyframes object2 {
+  50% {
+    left: 44%;
+    top: 20%;
+  }
+}
+.cols {
+  width: 50%;
+}
+.cols0 {
+  z-index: 5;
+}
+.top-line {
+  display: block;
+  position: relative;
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: #3d535f;
+}
+.top-line::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 45px;
+  bottom: 10px;
+  background-color: #7f00ff;
+}
+h1 {
+  display: block;
+  font-size: 7em;
+  font-weight: 900;
+  color: #3d535f;
+}
+.multi-text {
+  color: #7f00ff;
+  text-transform: capitalize;
+}
+p {
+  display: block;
+  width: auto;
+  font-size: 1.2em;
+  color: #3d535f;
+}
+.btns {
+  width: 100%;
+  position: relative;
+  left: 150px;
+}
+.btns button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #3d535f;
+  padding: 8px 14px;
+  margin: 40px 5px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+.btns button:hover {
+  background-color: #7f00ff;
+}
+.img-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.img-box img {
+  position: relative;
+  height: 100%;
+  width: calc(100% - 80px);
+  top: -20px;
+  right: 50px;
+  animation: animateCat 4s linear infinite;
+  z-index: 11;
+}
+@keyframes animateCat {
+  50% {
+    right: 35px;
+    top: -18px;
+  }
+}
+
+/* media screens */
+@media (max-width: 1850px) {
+  .wrapper::before {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    top: 40%;
+    left: -8%;
+    animation: object1 6s linear infinite;
+  }
+  @keyframes object1 {
+    50% {
+      top: 41%;
+      left: -13%;
+    }
+  }
+  .wrapper::after {
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+    top: 25%;
+    left: 56%;
+    animation: object2 6s linear infinite;
+  }
+  @keyframes object2 {
+    50% {
+      left: 54%;
+      top: 20%;
+    }
+  }
+  .img-box img {
+    top: -20px;
+    right: -95px;
+    animation: animateCat 4s linear infinite;
+    z-index: 11;
+  }
+  @keyframes animateCat {
+    50% {
+      right: -75px;
+      top: -18px;
+    }
+  }
+}
+
+@media (max-width: 1460px) {
+  h1 {
+    font-size: 6em;
+  }
+
+  .wrapper::before {
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    top: 40%;
+    left: -8%;
+    animation: object1 6s linear infinite;
+  }
+  @keyframes object1 {
+    50% {
+      left: -13%;
+      top: 41%;
+    }
+  }
+  .wrapper::after {
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    top: 25%;
+    left: 56%;
+    animation: object2 6s linear infinite;
+  }
+  @keyframes object2 {
+    50% {
+      left: 54%;
+      top: 20%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 5em;
+  }
+
+  .btns {
+    left: 100px;
+  }
+  .btns button {
+    font-size: 20px;
+  }
+  .wrapper::before {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    top: 40%;
+    left: -8%;
+    animation: object1 6s linear infinite;
+  }
+  @keyframes object1 {
+    50% {
+      left: -13%;
+      top: 41%;
+    }
+  }
+  .wrapper::after {
+    height: 550px;
+    width: 550px;
+    border-radius: 50%;
+    top: 25%;
+    left: 56%;
+    animation: object2 6s linear infinite;
+  }
+  @keyframes object2 {
+    50% {
+      left: 54%;
+      top: 20%;
+    }
+  }
+  .img-box img {
+    width: calc(100% - 60px);
+    top: -20px;
+    right: -105px;
+    animation: animateCat 4s linear infinite;
+    z-index: 11;
+  }
+  @keyframes animateCat {
+    50% {
+      right: -85px;
+      top: -18px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .logo {
+    font-size: 38px;
+    font-weight: 700;
+  }
+  .nav-items li a {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  .links a {
+    font-size: 25px;
+  }
+  h1 {
+    font-size: 4em;
+  }
+
+  .btns {
+    left: 80px;
+  }
+
+  .wrapper::before {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    top: 40%;
+    left: -8%;
+    animation: object1 6s linear infinite;
+  }
+  @keyframes object1 {
+    50% {
+      left: -13%;
+      top: 41%;
+    }
+  }
+  .wrapper::after {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    top: 30%;
+    left: 56%;
+    animation: object2 6s linear infinite;
+  }
+  @keyframes object2 {
+    50% {
+      top: 25%;
+      left: 54%;
+    }
+  }
+  .img-box img {
+    width: calc(100% - 35px);
+    top: -20px;
+    right: -105px;
+    animation: animateCat 4s linear infinite;
+    z-index: 11;
+  }
+  @keyframes animateCat {
+    50% {
+      right: -85px;
+      top: -18px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  /* body {
+    overflow: auto;
+  } */
+  nav,
+  .nav-items {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    z-index: 55;
+  }
+  .nav-items {
+    margin: 0 0 5rem 0;
+  }
+  .logo {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 5rem 0;
+  }
+  .nav-items li a {
+    font-size: 25px;
+  }
+  .links a {
+    font-size: 30px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 4.5em;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    left: 50px;
+  }
+  .btns button {
+    font-size: 18px;
+    margin: 1rem 0;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3%;
+    /* overflow: hidden; */
+  }
+  .wrapper::before {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    top: 40%;
+    left: -8%;
+    animation: object1 6s linear infinite;
+  }
+
+  .wrapper::after {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    top: 30%;
+    left: 56%;
+    animation: object2 6s linear infinite;
+  }
+
+  .img-box img {
+    width: calc(100% - 30px);
+    top: -20px;
+    right: -105px;
+    animation: animateCat 4s linear infinite;
+    z-index: 11;
+  }
+  @keyframes animateCat {
+    50% {
+      right: -85px;
+      top: -18px;
+    }
+  }
+}
