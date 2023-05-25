@@ -377,6 +377,15 @@ p {
   body {
     overflow: auto;
   }
+  .container {
+    height: auto;
+  }
+  nav {
+    line-height: 3rem;
+  }
+  #cngBtn {
+    display: none;
+  }
   nav,
   .nav-items {
     display: flex;
@@ -384,6 +393,9 @@ p {
     flex-direction: column;
     align-items: center;
     z-index: 55;
+  }
+  .nav-items li {
+    margin: 0;
   }
   .nav-items {
     margin: 0 0 5rem 0;
@@ -399,9 +411,11 @@ p {
   .links a {
     font-size: 30px;
     width: 100%;
+    z-index: 777;
+    /* margin: 0; */
   }
   h1 {
-    font-size: 4.5em;
+    font-size: 3em;
   }
 
   .btns {
@@ -409,13 +423,16 @@ p {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    left: 50px;
+    left: 0;
+    margin: 2rem 0;
   }
   .btns button {
     font-size: 18px;
     margin: 1rem 0;
   }
-
+  .cols {
+    width: 100%;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -427,34 +444,24 @@ p {
     /* overflow: hidden; */
   }
   .wrapper::before {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
-    top: 40%;
+    top: 70%;
     left: -8%;
     animation: object1 6s linear infinite;
   }
-
+  @keyframes object1 {
+    50% {
+      top: 60%;
+      left: -13%;
+    }
+  }
   .wrapper::after {
-    height: 10em;
-    width: 10em;
-    border-radius: 50%;
-    top: 30%;
-    left: 56%;
-    animation: object2 6s linear infinite;
+    display: none;
   }
 
   .img-box img {
-    width: calc(100% - 30px);
-    top: -20px;
-    right: -105px;
-    animation: animateCat 4s linear infinite;
-    z-index: 11;
-  }
-  @keyframes animateCat {
-    50% {
-      right: -85px;
-      top: -18px;
-    }
+    display: none;
   }
 }
