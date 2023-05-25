@@ -10,6 +10,7 @@ let typingEffect = new Typed(".multi-text", {
 });
 
 cngBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   if (index > 1) {
     index = 0;
   }
