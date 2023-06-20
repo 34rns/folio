@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills</title>
+    <link rel="stylesheet" href="skill-3.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="skill-header-1">
+      <h2 class="l-h2">&#60;skillsOf&#62;</h2>
+      <h1 class="l-h1">
+        <span class="l-r">R</span><span class="l-n">N</span
+        ><span class="l-s">S</span>
+      </h1>
+      <h2 class="l-h2-v2">&#60;&#47;skillsOf&#62;</h2>
+    </header>
+
+    <main class="l-main">
+      <section class="skills">
+        <div class="container">
+          <div class="col">
+            <h2 class="titulo">Programming</h2>
+            <ul class="skill">
+              <li><span class="blueline html"></span><em>HTML</em></li>
+              <li><span class="blueline css"></span><em>CSS</em></li>
+              <li><span class="blueline php"></span><em>React</em></li>
+              <li>
+                <span class="blueline javascript"></span><em>Javascript</em>
+              </li>
+              <li><span class="blueline jquery"></span><em>jQuery</em></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2 class="plataformas titulo">Platforms</h2>
+            <ul class="skill">
+              <li>
+                <span class="greenline wordpress"></span><em>Wordpress</em>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2 class="programas titulo">Software</h2>
+            <ul class="skill">
+              <li>
+                <span class="redline illustrator"></span><em>Illustrator</em>
+              </li>
+              <li><span class="redline photoshop"></span><em>Photoshop</em></li>
+              <li><span class="redline premiere"></span><em>Premiere</em></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <h2 class="h2-before-swiper">Some of my works</h2>
+    <!-- Swiper -->
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="luffy.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <video
+            poster="https://thumbsnap.com/i/6EUMvq1i.jpg"
+            loop
+            muted
+            autoplay
+            playsinline
+          >
+            <source
+              src="https://thumbsnap.com/i/6EUMvq1i.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="swiper-slide">
+          <video
+            poster="https://thumbsnap.com/i/71dd9hmW.jpg"
+            loop
+            muted
+            autoplay
+            playsinline
+          >
+            <source
+              src="https://thumbsnap.com/i/71dd9hmW.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://thumbsnap.com/s/xfLFjnn2.jpg"
+            alt="Free Photo Sharing by ThumbSnap"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://thumbsnap.com/s/UTbnFUY2.jpg"
+            alt="Free Photo Sharing by ThumbSnap"
+          />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+      //  Initialize Swiper
+
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
